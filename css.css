@@ -19,7 +19,7 @@ body {
   padding: 20px 40px 20px 40px;
   @include box-sizing(border-box);
   border-radius:4px;
-  background-color:#FFF;
+  background-color:#FFF;}
   
   h3 {
     margin:20px 0 10px 0;
