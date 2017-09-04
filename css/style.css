@@ -1,0 +1,1611 @@
+/* https://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*BASE CSS*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  color: #6381a1;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/*STYLING*/
+
+.wrapper {
+  display: table;
+  max-width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/*HEADER CSS*/
+
+header {
+  width: 70%;
+  margin-left: 78px;
+  display: table;
+}
+
+#topNav {
+  background-color: #4b6c8b;
+  height: 70px;
+  display: table-cell;
+  position: absolute;
+  right: 0;
+}
+
+#topNav ul {
+  height: 100%;
+  display: inline-table;
+  border: 1px solid #334c64;
+  border-right: none;
+}
+
+#topNav ul li {
+  float: left;
+  position: relative;
+  width: 78px;
+  height: 67px;
+  border: 1px solid #5d84a4;
+  border-right: 1px solid #334c64;
+  border-bottom: none;
+  text-align: center;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.icon-search {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  fill: #6889a7;
+}
+
+.icon-addCalendar {
+  background: url(http://i58.tinypic.com/5wiglj.png) no-repeat center;
+}
+
+.icon-addToCircles {
+  background: url(http://i57.tinypic.com/2n0ovt4.png) no-repeat center;
+}
+
+.icon-notifications {
+  background: url(http://i58.tinypic.com/w12pup.png) no-repeat center;
+}
+
+.icon-user1 {
+  background: #3D5B77 url(http://i57.tinypic.com/w6p74p.png) no-repeat center;
+}
+
+.icon-user2 {
+  background: #3D5B77 url(http://i60.tinypic.com/2uge3ac.png) no-repeat center;
+}
+
+.icon-user3 {
+  background: #3D5B77 url(http://i57.tinypic.com/2ahcvbl.png) no-repeat center;
+}
+
+.icon-user4 {
+  background: #3D5B77 url(http://i61.tinypic.com/20qba6o.png) no-repeat center;
+}
+
+.icon-user5 {
+  background: #3D5B77 url(http://i59.tinypic.com/spxcgw.png) no-repeat center;
+}
+
+.icon-settings {
+  background: url(http://i62.tinypic.com/28ai7f5.png) no-repeat center;
+}
+
+.icon-home {
+  background: url(http://i62.tinypic.com/2zyy979.png) no-repeat center;
+}
+
+.icon-calendar {
+  background: url(http://i58.tinypic.com/2prs1go.png) no-repeat center;
+}
+
+.icon-circles {
+  background: url(http://i61.tinypic.com/28vta1i.png) no-repeat center;
+}
+
+.icon-doneTask {
+  background: url(http://i62.tinypic.com/hu1640.png) no-repeat center;
+}
+
+.icon-stats {
+  background: url(http://i59.tinypic.com/214nir.png) no-repeat center;
+}
+
+.icon-onDemandReview:before {
+  content: url(http://i59.tinypic.com/2nqb87o.png);
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -1px;
+}
+
+.icon-manageGoals:before {
+  content: url(http://i59.tinypic.com/24g6p2s.png);
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -1px;
+}
+
+.icon-askFeedback:before {
+  content: url(http://i58.tinypic.com/n5pmy1.png);
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -1px;
+}
+
+.icon-setReview:before {
+  content: url(http://i58.tinypic.com/se96yv.png);
+}
+
+.icon-setGoal:before {
+  content: url(http://i59.tinypic.com/xp7rdf.png);
+}
+
+.icon-setNote:before {
+  content: url(http://i58.tinypic.com/1znwkld.png);
+}
+
+.icon-up-down {
+  background: url(http://i60.tinypic.com/1zx9mki.png) no-repeat center;
+  width: 10px;
+  height: 22px;
+  top: 6px !important;
+}
+
+.icon-team {
+  background: url(http://i58.tinypic.com/29c1dz.png) no-repeat center left;
+  width: 34px;
+  height: 22px;
+}
+
+#topNav ul li.icon-notifications a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#topNav ul li.icon-notifications .counter {
+  position: absolute;
+  right: 0;
+  padding-top: 5px;
+  width: 24px;
+  height: 16px;
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #e07182;
+}
+
+#topNav ul li.icon-notifications .counter:after {
+  content: "";
+  position: absolute;
+  border: 8px solid rgba(0, 0, 0, 0);
+  border-top-color: #e07182;
+  border-left: 0;
+  left: 5px;
+  top: 21px;
+}
+
+#topNav ul li:last-child {
+  border-left: 0;
+  border-right: none;
+}
+
+#searchBox {
+  position: relative;
+  border-right: 1px solid #334c64;
+  width: 100%;
+  height: 70px;
+  background-color: #3d5b77;
+  display: table-cell;
+}
+
+#searchBox form {
+  padding: 0 20px 0 30px;
+}
+
+.searchInput {
+  height: 70px;
+  width: 95%;
+  padding: 0 0 0 30px;
+  margin: 0;
+  background-color: #3d5b77;
+  border: none;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 16px;
+  color: #7E9BB8;
+}
+
+.searchInput::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #6d88a4;
+}
+
+.searchInput:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #6d88a4;
+  opacity: 1;
+}
+
+.searchInput::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #6d88a4;
+  opacity: 1;
+}
+
+.searchInput:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #6d88a4;
+}
+
+.searchInput:active,
+.searchInput:focus {
+  outline: none;
+}
+
+
+/*LEFT NAV CSS*/
+
+#leftNav {
+  background-color: #4b6c8b;
+  width: 78px;
+  height: 100%;
+  position: absolute;
+}
+
+#leftNav ul li {
+  text-align: center;
+  height: 70px;
+  border: 1px solid #3c5674;
+  border-top-color: #537797;
+  border-left-color: #537797;
+  transition: all ease 0.3s;
+  box-sizing: border-box;
+}
+
+#leftNav ul li.selected {
+  background-color: #3d5b77;
+  border: 1px solid #2f4c67;
+  border-left: 4px solid #07a9e1;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+#leftNav ul li:hover,
+#topNav ul li:hover {
+  background-color: #54789a;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+#leftNav ul li a,
+#topNav ul li a {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*MAIN CONTENT CSS*/
+
+.toDo {
+  float: left;
+}
+
+.toDo,
+.yourTeam,
+.details {
+  width: 94%;
+  display: table;
+  margin-left: 78px;
+}
+
+.toDo .reviews {
+  border-right: 1px solid #d7e3f0;
+}
+
+.toDo .reviews,
+.toDo .goals {
+  width: 50%;
+  display: table-cell;
+  padding: 25px 30px 15px 25px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccdcec;
+}
+
+.toDo .reviews h1,
+.toDo .goals h1 {
+  float: left;
+  font-size: 20px;
+  color: #58789a;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.toDo .reviews form,
+.toDo .goals form {
+  clear: both;
+}
+
+.toDo form ul {
+  position: relative;
+}
+
+.toDo .reviews form ul li,
+.toDo .goals form ul li {
+  position: relative;
+  padding: 15px 5px 15px;
+  border-bottom: 1px solid #e5eef8;
+}
+
+.toDo form ul li:last-child {
+  border: none;
+}
+
+.toDo form ul li input[type=checkbox] {
+  cursor: pointer;
+  position: relative;
+  visibility: hidden;
+}
+
+.toDo form ul li input[type=checkbox]:after {
+  background-color: white;
+  border: 1px solid #bfd2e4;
+  border-radius: 2px;
+  color: #FFF;
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: -3px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  visibility: visible;
+}
+
+.toDo form ul li input[type=checkbox]:checked:after {
+  border: 1px solid #61c6cf;
+  color: #61c6cf;
+  content: "✓";
+}
+
+.toDo form ul li input#temp {
+  color: #6381A1;
+  border: none;
+  outline: none;
+  font-size: 100%;
+  width: 50%;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.toDo form ul li button {
+  display: none;
+}
+
+.toDo form ul li.active {
+  background-color: #f6fafe;
+}
+
+.toDo form ul li.active button {
+  display: block;
+}
+
+.toDo form ul li.active:before {
+  content: "";
+  position: absolute;
+  border-left: 5px solid #61c6cf;
+  left: -5px;
+  width: 5px;
+  height: 51px;
+  margin-top: -16px;
+}
+
+.toDo form ul li .reviewDate,
+.toDo form ul li .goalAchivements {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  float: right;
+  margin-right: 0px;
+  background-color: #F6FAFE;
+  color: #95AAC0;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 12px;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.toDo form ul li .reviewDate {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.toDo form ul li.active .reviewDate {
+  margin-right: 60px;
+}
+
+.toDo form ul li span {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.toDo form ul li .alert .reviewDate {
+  background-color: #E07182 !important;
+  color: #FFF !important;
+  width: 110px;
+}
+
+.toDo form ul li .alert:before {
+  content: "!";
+  position: absolute;
+  width: 15px;
+  height: 19px;
+  background-color: #CE7180;
+  color: #FFF;
+  text-align: center;
+  padding: 5px 2px 0px 2px;
+  left: -19px;
+  margin-top: 12px;
+  border-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.toDo form ul li .warn-score .goalAchivements {
+  background-color: #ed9e57 !important;
+  color: #FFF !important;
+}
+
+.toDo form ul li .warn-approval .goalAchivements {
+  background-color: #f7bf47 !important;
+  color: #FFF !important;
+}
+
+.toDo form ul li .ui-datepicker-trigger {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: #60C6CF url(http://i58.tinypic.com/4gszrr.png) no-repeat center;
+}
+
+.toDo form ul li .ui-datepicker-trigger:hover {
+  cursor: pointer;
+}
+
+.toDo form ul li .ui-datepicker-trigger:before {
+  content: "";
+  left: -10px;
+  top: 21px;
+  position: absolute;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-right-color: #61C6CF;
+}
+
+.toDo form ul li label {
+  margin-left: 15px;
+}
+
+.toDo form ul li label:hover {
+  cursor: pointer;
+}
+
+.toDo .add {
+  position: relative;
+  background-color: #c0d6ec;
+  color: #FFF;
+  padding: 0px 6px;
+  font-weight: bold;
+  border-radius: 2px;
+  font-size: 22px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.toDo .add:hover {
+  background-color: #80abd2;
+}
+
+.toDo .add.selected {
+  position: relative;
+  background-color: #61c6cf;
+  color: #FFF;
+  padding: 0px 6px;
+  font-weight: bold;
+  border-radius: 2px;
+  font-size: 22px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.toDo .add.selected:after {
+  content: "";
+  position: absolute;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-top-color: #61c6cf;
+  left: 8px;
+  top: 25px;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.yourTeam {
+  background-color: #dfebf6;
+  text-align: center;
+  border-top: 1px solid #ccdcec;
+  border-bottom: 1px solid #bdcfe1;
+  padding: 14px 0;
+  float: left;
+}
+
+.details {
+  text-align: center;
+  background-color: #cadbec;
+  float: left;
+}
+
+.details > ul {
+  display: table;
+  margin: 30px 0;
+}
+
+.details > ul > li {
+  display: inline-table;
+  vertical-align: top;
+  width: 30%;
+  border-radius: 3px;
+  box-shadow: 0px 1px 5px -2px #5E7D9B;
+  margin: 0 15px 30px;
+  background: #FFF;
+}
+
+.details > ul > li > div {
+  width: 100%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.details > ul > li h2 {
+  text-align: left;
+  padding: 20px 25px;
+  font-size: 18px;
+  float: left;
+}
+
+.details .details-header {
+  position: relative;
+  background-color: #f6fafe;
+  float: left;
+  width: 100%;
+}
+
+.details .details-header .icon-setReview,
+.details .details-header .icon-setGoal,
+.details .details-header .icon-setNote {
+  position: relative;
+  padding: 8px 10px 6px;
+  border: 1px solid #C0D1E3;
+  margin: 13px;
+  border-radius: 3px;
+  float: right;
+}
+
+.details .details-header .icon-setReview .tooltip,
+.details .details-header .icon-setGoal .tooltip,
+.details .details-header .icon-setNote .tooltip {
+  pointer-events: none;
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  bottom: -40px;
+  opacity: 0;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.details .details-header .icon-setReview .tooltip span,
+.details .details-header .icon-setGoal .tooltip span,
+.details .details-header .icon-setNote .tooltip span {
+  display: block;
+  white-space: nowrap;
+  position: relative;
+  background: rgba(111, 139, 169, 0.8);
+  padding: 3px 10px;
+  left: -50%;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFF;
+  border-radius: 3px;
+  line-height: 2;
+}
+
+.details .details-header .icon-setReview .tooltip span:after,
+.details .details-header .icon-setGoal .tooltip span:after,
+.details .details-header .icon-setNote .tooltip span:after {
+  top: -16px;
+  border: solid rgba(0, 0, 0, 0);
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-bottom-color: rgba(111, 139, 169, 0.8);
+  border-width: 8px;
+  left: 50%;
+  margin-left: -8px;
+}
+
+.details .details-header .icon-setReview:hover,
+.details .details-header .icon-setGoal:hover,
+.details .details-header .icon-setNote:hover {
+  cursor: pointer;
+  background-color: #FFF;
+}
+
+.details .details-header .icon-setReview:hover span,
+.details .details-header .icon-setGoal:hover span,
+.details .details-header .icon-setNote:hover span {
+  opacity: 1;
+  transition: all ease 0.3s;
+}
+
+.details .reviewFeedback > ul li:first-child,
+.details .goalProgress > ul li:first-child {
+  border-top: 1px solid #d7e3f0;
+}
+
+.details .reviewFeedback > ul li,
+.details .goalProgress > ul li {
+  display: table;
+  width: 100%;
+  background-color: #FFF;
+  border-bottom: 1px solid #d7e3f0;
+}
+
+.details .goalProgress li:nth-child(even) {
+  background-color: #f6fafe;
+}
+
+.details .goalProgress .icon-user1 {
+  background-size: 36px;
+}
+
+.details .reviewFeedback .score,
+.details .goalProgress .icon-user1,
+.details .goalProgress .icon-user2,
+.details .goalProgress .icon-user3,
+.details .goalProgress .icon-user4,
+.details .goalProgress .icon-user5 {
+  width: 25%;
+  box-sizing: border-box;
+  border-right: 1px dashed #d5e0ed;
+  position: relative;
+  background-color: #FFF;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.details .goalProgress .icon-user1,
+.details .goalProgress .icon-user2,
+.details .goalProgress .icon-user3,
+.details .goalProgress .icon-user4,
+.details .goalProgress .icon-user5 {
+  border: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.details .reviewFeedback .score .circle {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  margin-top: -8px;
+  background-color: #FFF;
+}
+
+.details .reviewFeedback .score .circle.purple {
+  border: 3px solid #A08BCD;
+}
+
+.details .reviewFeedback .score .circle.orange {
+  border: 3px solid #ec974b;
+}
+
+.details .reviewFeedback .score .circle.yellow {
+  border: 3px solid #f7bf47;
+}
+
+.details .reviewFeedback .score p {
+  font-size: 40px;
+}
+
+.details .reviewFeedback .info,
+.details .goalProgress .info {
+  text-align: left;
+  width: 75%;
+  padding: 20px;
+  line-height: 18px;
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.details .goalProgress .info {
+  padding-left: 0;
+}
+
+.details .reviewFeedback .info .title {
+  font-weight: bold;
+}
+
+.details .goalProgress .name {
+  font-weight: bold;
+  position: relative;
+  margin-top: 1px;
+}
+
+.details .goalProgress .name .position {
+  font-weight: normal;
+  color: #8ba4be;
+}
+
+.details .goalProgress .progressBar {
+  height: 15px;
+  width: 80%;
+  float: left;
+  margin-top: 3px;
+}
+
+.details .goalProgress .progressBar .progress {
+  width: 0;
+  background-color: #61C6CF;
+  color: #61c6cf;
+  height: 100%;
+  display: block;
+  position: relative;
+  border-radius: 3px;
+  float: left;
+  font-weight: bold;
+  -webkit-transition: width 1s ease-out;
+  -moz-transition: width 1s ease-out;
+  -o-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+}
+
+.details .goalProgress .progressBar .progress.warning {
+  background-color: #de808f !important;
+  color: #de808f !important;
+}
+
+.details .goalProgress .progressBar .progress:after {
+  content: attr(data-progressValue) "%";
+  position: absolute;
+  right: -50px;
+}
+
+.details .action {
+  background-color: #31b6fc;
+  float: left;
+  width: 100%;
+}
+
+.details .action p a {
+  color: #FFF;
+  padding: 20px 0;
+  font-weight: bold;
+  float: left;
+  text-align: center;
+  width: 100%;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.details .action p a:hover {
+  background-color: #05b1ec;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+
+/*CHART*/
+
+.chart {
+  border-top: 1px solid #d7e3f0;
+  border-bottom: 1px solid #d7e3f0;
+  float: left;
+  width: 100%;
+}
+
+.doughnutChart {
+  position: relative;
+  height: 165px;
+  padding: 20px 0;
+  background: #FFF;
+}
+
+.doughnutTip {
+  position: absolute;
+  min-width: 30px;
+  max-width: 300px;
+  padding: 5px 15px;
+  border-radius: 3px;
+  background: rgba(111, 139, 169, 0.8);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: .06em;
+  pointer-events: none;
+}
+
+.doughnutTip:after {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  content: "";
+  height: 0;
+  margin: 0 0 0 -6px;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 6px solid rgba(111, 139, 169, 0.8);
+  line-height: 0;
+}
+
+.doughnutSummary {
+  position: relative;
+  top: -50%;
+  left: 50%;
+  color: #6f8ba9;
+  font-weight: bold;
+  text-align: center;
+  cursor: default;
+}
+
+.doughnutSummaryTitle {
+  position: absolute;
+  width: 100%;
+  top: 5px;
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+
+.doughnutSummaryNumber {
+  position: absolute;
+  width: 100%;
+  margin-top: 30%;
+  margin-left: 2%;
+  font-size: 50px;
+}
+
+.doughnutSummaryNumber:before {
+  content: "+";
+  font-size: 25px;
+  position: absolute;
+  margin-top: 20%;
+  margin-left: -15%;
+}
+
+.chart path:hover {
+  opacity: .65;
+}
+
+.chart-legend {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  font-size: 13px;
+  float: left;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+.chart-legend li {
+  height: 1.25em;
+  margin-bottom: 0.7em;
+  padding: 0 1.5em;
+  position: relative;
+  color: #97b3ce;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.chart-legend li span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  margin-top: -8px;
+  background-color: #FFF;
+}
+
+.chart-legend em {
+  font-style: normal;
+}
+
+.chart-bar {
+  width: 100%;
+  float: left;
+  padding: 11px 0 0px;
+  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #d7e3f0;
+}
+
+.chart-bar #numbers {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  background-color: #f6fafe;
+  top: 0;
+}
+
+.chart-bar #numbers li {
+  text-align: left;
+  margin: 0 2em 0 4em;
+  list-style: none;
+  height: 25px;
+  border-bottom: 1px solid #d7e3f0;
+  position: relative;
+  top: 0;
+}
+
+.chart-bar #numbers li span {
+  color: #8ba4be;
+  position: absolute;
+  bottom: -8px;
+  right: 103%;
+}
+
+.chart-bar #bars {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.chart-bar #bars li {
+  display: inline-block;
+  width: 80px;
+  height: 120px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.chart-bar #bars li .bar {
+  display: block;
+  width: 45px;
+  color: #FFF;
+  font-weight: bold;
+  margin-left: 18px;
+  padding-top: 10px;
+  background: #7fa1c2;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -3px;
+  height: 0;
+  -webkit-transition: height 1s ease-in-out;
+  -moz-transition: height 1s ease-in-out;
+  -o-transition: height 1s ease-in-out;
+  transition: height 1s ease-in-out;
+}
+
+.chart-bar #bars li .bar:hover {
+  background-color: #6f8ba9;
+  cursor: pointer;
+}
+
+.chart-bar #bars li span {
+  color: #8ba4be;
+  width: 100%;
+  position: absolute;
+  bottom: -1.5em;
+  left: 0;
+  text-align: center;
+}
+
+
+/*SELECT BOX IT CSS*/
+
+
+/*
+ * jquery.selectBoxIt.css 3.8.1
+ * Author: @gregfranko
+ */
+
+
+/*
+  Common CSS Properties
+  ---------------------
+  These properties will be applied to any themes that you use
+*/
+
+
+/* SelectBoxIt container */
+
+.selectboxit-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+/* Styles that apply to all SelectBoxIt elements */
+
+.selectboxit-container * {
+  font: 14px Helvetica, Arial;
+  /* Prevents text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  outline: none;
+  white-space: nowrap;
+}
+
+
+/* Button */
+
+.selectboxit-container .selectboxit {
+  width: 150px !important;
+  /* Width of the dropdown button */
+  cursor: pointer;
+  margin: 0;
+  padding: 5px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+
+/* Height and Vertical Alignment of Text */
+
+.selectboxit-container span,
+.selectboxit-container .selectboxit-options a {
+  height: 30px;
+  /* Height of the drop down */
+  line-height: 30px;
+  /* Vertically positions the drop down text */
+  display: block;
+}
+
+
+/* Focus pseudo selector */
+
+.selectboxit-container .selectboxit:focus {
+  outline: 0;
+}
+
+
+/* Disabled Mouse Interaction */
+
+.selectboxit.selectboxit-disabled,
+.selectboxit-options .selectboxit-disabled {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  cursor: default;
+}
+
+
+/* Button Text */
+
+.selectboxit-text {
+  text-indent: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+}
+
+.selectboxit .selectboxit-option-icon-container {
+  margin-left: 5px;
+}
+
+
+/* Options List */
+
+.selectboxit-container .selectboxit-options {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 100%;
+  /* Minimum Width of the dropdown list box options */
+  *width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  cursor: pointer;
+  display: none;
+  z-index: 9999999999999;
+  border-radius: 6px;
+  text-align: left;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+
+/* Individual options */
+
+.selectboxit-option .selectboxit-option-anchor {
+  padding: 0 2px;
+}
+
+
+/* Individual Option Hover Action */
+
+.selectboxit-option .selectboxit-option-anchor:hover {
+  text-decoration: none;
+}
+
+
+/* Individual Option Optgroup Header */
+
+.selectboxit-option,
+.selectboxit-optgroup-header {
+  text-indent: 5px;
+  /* Horizontal Positioning of the select box option text */
+  margin: 0;
+  list-style-type: none;
+}
+
+
+/* The first Drop Down option */
+
+.selectboxit-option-first {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+
+/* The first Drop Down option optgroup */
+
+.selectboxit-optgroup-header + .selectboxit-option-first {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+
+/* The last Drop Down option */
+
+.selectboxit-option-last {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+
+/* Drop Down optgroup headers */
+
+.selectboxit-optgroup-header {
+  font-weight: bold;
+}
+
+
+/* Drop Down optgroup header hover psuedo class */
+
+.selectboxit-optgroup-header:hover {
+  cursor: default;
+}
+
+
+/* Drop Down down arrow container */
+
+.selectboxit-arrow-container {
+  /* Positions the down arrow */
+  width: 30px;
+  position: absolute;
+  right: 0;
+}
+
+
+/* Drop Down down arrow */
+
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+  /* Horizontally centers the down arrow */
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+}
+
+
+/* Drop Down down arrow for jQueryUI and jQuery Mobile */
+
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow.ui-icon {
+  top: 30%;
+}
+
+
+/* Drop Down individual option icon positioning */
+
+.selectboxit-option-icon-container {
+  float: left;
+}
+
+.selectboxit-container .selectboxit-option-icon {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+
+/* Drop Down individual option icon positioning */
+
+.selectboxit-option-icon-url {
+  width: 18px;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  float: left;
+}
+
+.selectboxit-rendering {
+  display: inline-block !important;
+  *display: inline !important;
+  zoom: 1 !important;
+  visibility: visible !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+
+/* jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
+
+.jqueryui .ui-icon {
+  background-color: inherit;
+}
+
+
+/* Another jQueryUI and jQuery Mobile compatability fix - Feel free to remove this style if you are not using jQuery Mobile */
+
+.jqueryui .ui-icon-triangle-1-s {
+  background-position: -64px -16px;
+}
+
+
+/*
+  Default Theme
+  -------------
+  Note: Feel free to remove all of the CSS underneath this line if you are not using the default theme
+*/
+
+.selectboxit-btn {
+  background-color: #f6fafe;
+  box-shadow: 0px 2px 5px -2px;
+  transition: all ease 0.3s;
+}
+
+.selectboxit-btn.selectboxit-enabled:hover,
+.selectboxit-btn.selectboxit-enabled:focus,
+.selectboxit-btn.selectboxit-enabled:active {
+  color: #7fa1c2;
+  background-color: #FFF;
+  transition: all ease 0.3s;
+}
+
+.selectboxit-btn.selectboxit-enabled:hover,
+.selectboxit-btn.selectboxit-enabled:focus {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+}
+
+.selectboxit-default-arrow {
+  width: 0;
+  height: 0;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.selectboxit-list {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selectboxit-list .selectboxit-option-anchor {
+  color: #333333;
+}
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+  color: #ffffff;
+  background-color: #4b6c8b;
+}
+
+.selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {
+  color: #999999;
+}
