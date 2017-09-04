@@ -674,49 +674,53 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<table class="table stats-table ">
 								<thead>
 									<tr>
-										<th>S.NO</th>
-										<th>PRODUCT</th>
-										<th>STATUS</th>
-										<th>PROGRESS</th>
+										<th>EMPLOYEE.NO</th>
+										<th>NAME</th>
+										<th>LAST STATUS</th>
+										<th>CHANGE</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<th scope="row">1</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-success">In progress</span></td>
+										<td>Josh</td>
+										<td><span class="label label-success"><i class="fa fa-smile-o fa-6"> Happy</i></span></td>
 										<td><h5>85% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
 										<th scope="row">2</th>
-										<td>Aliquam</td>
-										<td><span class="label label-warning">New</span></td>
+										<td>Drew</td>
+										<td><span class="label label-warning"><i class="fa fa-meh-o fa-6"> Neutral</i></span></td>
 										<td><h5>35% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
 										<th scope="row">3</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-danger">Overdue</span></td>
+										<td>Bob</td>
+										<td><span class="label label-danger"><i class="fa fa-frown-o fa-6"> Unhappy</i></span></td>
 										<td><h5 class="down">40% <i class="fa fa-level-down"></i></h5></td>
 									</tr>
 									<tr>
 										<th scope="row">4</th>
-										<td>Aliquam</td>
-										<td><span class="label label-info">Out of stock</span></td>
+										<td>Eliza</td>
+										<td><span class="label label-info">No data</span></td>
 										<td><h5>100% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
 									<tr>
 										<th scope="row">5</th>
-										<td>Lorem ipsum</td>
-										<td><span class="label label-success">In progress</span></td>
+										<td>Stephanie</td>
+										<td><span class="label label-success"><i class="fa fa-smile-o fa-6"> Happy</i></span></td>
 										<td><h5 class="down">10% <i class="fa fa-level-down"></i></h5></td>
 									</tr>
 									<tr>
 										<th scope="row">6</th>
-										<td>Aliquam</td>
-										<td><span class="label label-warning">New</span></td>
+										<td>Ryan</td>
+                                        <td><span class="label label-warning"><i class="fa fa-meh-o fa-6"> Neutral</i></span></td>
 										<td><h5>38% <i class="fa fa-level-up"></i></h5></td>
 									</tr>
+                                   <tr>
+                                       <th scope="row"><a href="#">View all</a></th>
+
+                                   </tr>
 								</tbody>
 							</table>
 						</div>
@@ -773,22 +777,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         lineWidth: 0,
         fillOpacity:0.85,
 			data: [
-				{period: '2015 Q1', iphone: 2668, ipad: null, itouch: 2649},
-				{period: '2015 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
-				{period: '2015 Q3', iphone: 12920, ipad: 10975, itouch: 9910},
-				{period: '2015 Q4', iphone: 8770, ipad: 6600, itouch: 6695},
-				{period: '2016 Q1', iphone: 10820, ipad: 10924, itouch: 12300},
-				{period: '2016 Q2', iphone: 9680, ipad: 9010, itouch: 7891},
-				{period: '2016 Q3', iphone: 4830, ipad: 3805, itouch: 1598},
-				{period: '2016 Q4', iphone: 15083, ipad: 8977, itouch: 5185},
-				{period: '2017 Q1', iphone: 10697, ipad: 4470, itouch: 2038},
+				{period: '2017 Q1', iphone: 2668, ipad: null, itouch: 2649},
+				{period: '2017 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
+				{period: '2017 Q3', iphone: 12920, ipad: 10975, itouch: 9910},
+				{period: '2017 Q4', iphone: 8770, ipad: 6600, itouch: 6695},
+				{period: '2018 Q1', iphone: 10820, ipad: 10924, itouch: 12300},
+				{period: '2018 Q2', iphone: 9680, ipad: 9010, itouch: 7891},
+				{period: '2018 Q3', iphone: 4830, ipad: 3805, itouch: 1598},
+				{period: '2018 Q4', iphone: 15083, ipad: 8977, itouch: 5185},
+				{period: '2019 Q1', iphone: 10697, ipad: 4470, itouch: 2038},
 			
 			],
 			lineColors:['#eb6f6f','#926383','#eb6f6f'],
 			xkey: 'period',
             redraw: true,
             ykeys: ['iphone', 'ipad', 'itouch'],
-            labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
+            labels: ['Average Lines', 'P/R', 'Total Commits'],
 			pointSize: 2,
 			hideHover: 'auto',
 			resize: true
