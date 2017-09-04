@@ -20,7 +20,7 @@ body, h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: #f8f8f8;
   background-size: cover;
-  background: url(../img/intro-bg.jpg) no-repeat fixed;
+  background: url(../../img/intro-bg.jpg) no-repeat fixed;
   height: 100%;
 }
 
