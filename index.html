@@ -1,0 +1,272 @@
+<link href="css.css" rel="stylesheet" type="text/css" media="all">
+<script src="js.js"></script>
+<div ng-app="app">
+    <div ng-controller="appController as ctrl">
+        <div class="toolbar">
+            <!-- TOOLBAR -->
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Menu" ng-show="true" ng-click="ctrl.toggleMainMenu()">
+                        <i class="fa fa-bars"></i>
+                    </md-button>
+
+                    <h2>
+                        <span class="app-name">
+                            <i class="fa fa-coffee" hide-sm></i>Presto
+                        </span>
+                    </h2>
+
+                    <span flex></span>
+
+                    <div class="identification" layout="column">
+                        <div class="name">Pedro Álvares Cabral</div>
+                        <md-button class="role" ng-click="ctrl.changeRole($event)">
+                            <i class="fa fa-refresh"></i> {{ctrl.role}}
+                        </md-button>
+                    </div>
+
+                    <md-button class="md-icon-button toolbar-icon" aria-label="Log out menu" ng-click="ctrl.toggleLogOutMenu($event)">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <!-- LOG OFF MENU -->
+            <div class="log-out-menu md-whiteframe-z1" ng-class="{'visible': ctrl.logOutMenuVisible}">
+                <md-button class="md-list-item-content" aria-label="Log Out" ng-click="ctrl.logOut()">
+                    <i class="fa fa-sign-out"></i>
+                    <span class="md-inline-list-icon-label">Log out</span>
+                </md-button>
+            </div>
+
+            <!-- LEFT SIDE MENU -->
+            <section layout="row" flex>
+                <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="menu-left">
+                    <md-toolbar></md-toolbar>
+
+                    <md-content class="md-padding side-menu">
+                        <div class="menu-item" layout="row" layout-align="start center" ng-repeat="view in ctrl.views" ng-class="{'separator': view.separator, 'selected': ctrl.currentView === view.label}" ng-click="ctrl.changeView(view.label)">
+                            <i class="fa {{view.icon}} icon-all-requests"></i>
+                            <span>{{view.label}}</span>
+                        </div>
+                    </md-content>
+                </md-sidenav>
+            </section>
+        </div>
+
+        <div class="view dashboard" ng-if="ctrl.currentView === 'Dashboard'" ng-controller="DashboardController as ctrl">
+            <h1>Dashboard</h1>
+
+            <div class="summary-boxes" layout="row" layout-align="space-between center">
+                <div class="summary-box summary-total">
+                    <div class="summary-box-main">
+                        <div class="summary-value">134</div>
+                        <div class="summary-desc">Total orders</div>
+                    </div>
+                    <div class="summary-box-footer">
+                        View all <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+
+                <div class="summary-box summary-pending">
+                    <div class="summary-box-main">
+                        <div class="summary-value">7</div>
+                        <div class="summary-desc">Pending orders</div>
+                    </div>
+                    <div class="summary-box-footer">
+                        View all <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+
+                <div class="summary-box summary-amount">
+                    <div class="summary-box-main">
+                        <div class="summary-value">23 570,00 €</div>
+                        <div class="summary-desc">Total sold</div>
+                    </div>
+                    <div class="summary-box-footer">
+                        View all <i class="fa fa-arrow-circle-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md-whiteframe-1dp">
+                <h2>Announcements</h2>
+
+                <md-list>
+                    <md-list-item class="md-2-line">
+                        <md-icon><i class="fa fa-exclamation-circle icon"></i></md-icon>
+
+                        <div class="md-list-item-text">
+                            <h3> Please, be aware of new contracts coming into force as from January, 1st 2016. </h3>
+                            <p><a ng-href="#">More info <i class="fa fa-arrow-circle-right"></i></a></p>
+                        </div>
+                    </md-list-item>
+
+                    <md-divider></md-divider>
+
+                    <md-list-item class="md-2-line">
+                        <md-icon><i class="fa fa-bullhorn icon"></i></md-icon>
+
+                        <div class="md-list-item-text">
+                            <h3>Technical maintenance planned on October, 23rd 2016. Presto will be unavailable between 17h00 and 18h00. </h3>
+                            <p><a ng-href="#">More info <i class="fa fa-arrow-circle-right"></i></a></p>
+                        </div>
+                    </md-list-item>
+
+                    <md-divider></md-divider>
+
+                    <md-list-item class="md-2-line">
+                        <md-icon><i class="fa fa-bullhorn icon"></i></md-icon>
+                        <div class="md-list-item-text">
+                            <h3>New reports available.</h3>
+                            <p><a ng-href="#">More info <i class="fa fa-arrow-circle-right"></i></a></p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </div>
+        </div>
+
+        <div class="view orders" ng-if="ctrl.currentView === 'Orders'" ng-controller="OrdersController as ctrl">
+            <h1>Orders</h1>
+
+            <div class="filter">
+                <md-input-container class="md-icon-float">
+                    <!-- Use floating label instead of placeholder -->
+                    <label>Filter</label>
+                    <md-icon class="name"><i class="fa fa-search"></i></md-icon>
+                    <input ng-model="ctrl.filter" type="text">
+                </md-input-container>
+            </div>
+
+            <div class="md-whiteframe-1dp">
+                <md-content>
+                    <div ng-repeat="order in ctrl.orders">
+                        <div class="order" layout="row">
+                            <div class="contractor" layout layout-align="center center">
+                                {{order.contractor}}
+                            </div>
+
+                            <div class="box-2" layout="column">
+                                <div class="number">{{order.number}}</div>
+                                <div class="date">{{order.date}}</div>
+                            </div>
+
+                            <div class="box-3">
+                                <div class="badge total">{{order.total}}€</div>
+                            </div>
+
+                            <div class="box-4">
+                                <div class="badge" ng-class="{'{{order.status}}': 1}">{{order.status}}</div>
+                            </div>
+
+                            <div flex></div>
+
+                            <div layout layout-align="center center">
+                                <md-button class="md-icon-button" aria-label="More">
+                                    <i class="fa fa-edit"></i>
+                                </md-button>
+                            </div>
+                        </div>
+
+                        <md-divider ng-if="!$last">
+                    </div>
+                </md-content>
+            </div>
+
+            <div class="add-button" layout="column">
+                <md-button class="md-fab md-warn" aria-label="Insert">
+                    <i class="fa fa-plus"></i>
+                </md-button>
+            </div>
+        </div>
+
+        <div class="view contracts" ng-if="ctrl.currentView === 'Contracts'">
+            <h1>Contracts</h1>
+
+            <h2>
+                All documents are in the PDF format. You need Adobe Reader in order to read them.
+            </h2>
+
+            <md-button class="md-primary">
+                <i class="fa fa-file-pdf-o"></i> Click here to download it.
+            </md-button>
+
+            <div class="boxes" layout="row" layout-align="space-between center">
+                <div class="box blue" layout="column" layout-align="start center">
+                    <div class="contractor-header">
+                        <div class="contractor">Ciano</div>
+                    </div>
+
+                    <md-button class="button">Contract 1 <i class="fa fa-download"></i></md-button>
+                    <md-button class="button">Addendum 1 <i class="fa fa-download"></i></md-button>
+                    <md-button class="button">Addendum 2 <i class="fa fa-download"></i></md-button>
+                </div>
+
+                <div class="box green" layout="column" layout-align="start center">
+                    <div class="contractor-header">
+                        <div class="contractor">Eurest</div>
+                    </div>
+
+                    <md-button class="button">Contract 1 <i class="fa fa-download"></i></md-button>
+                    <md-button class="button-hidden"></md-button>
+                    <md-button class="button-hidden"></md-button>
+                </div>
+
+                <div class="box orange" layout="column" layout-align="start center">
+                    <div class="contractor-header">
+                        <div class="contractor">Sodhexo</div>
+                    </div>
+                    <md-button class="button">Contract 1 <i class="fa fa-download"></i></md-button>
+                    <md-button class="button">Addendum 1 <i class="fa fa-download"></i></md-button>
+                    <md-button class="button-hidden"></md-button>
+                </div>
+
+                <div class="box yellow" layout="column" layout-align="start center">
+                    <div class="contractor-header">
+                        <div class="contractor">FoodInc</div>
+                    </div>
+                    <md-button class="button">Contract 1 <i class="fa fa-download"></i></md-button>
+                    <md-button class="button-hidden"></md-button>
+                    <md-button class="button-hidden"></md-button>
+                </div>
+            </div>
+        </div>
+
+        <div class="view reports" ng-if="ctrl.currentView === 'Reports'">
+            <h1>Reports</h1>
+        </div>
+
+        <div class="view settings" ng-if="ctrl.currentView === 'Settings'">
+            <h1>Settings</h1>
+        </div>
+    </div>
+
+    <script type="text/ng-template" id="dialogRole.html">
+        <md-dialog aria-label="Mango (Fruit)">
+            <form>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Change your role</h2>
+                    </div>
+                </md-toolbar>
+                <md-dialog-content style="max-width:800px;max-height:810px; ">
+                    <div>
+                        <md-radio-group ng-model="selected">
+                            <md-radio-button ng-repeat="role in roles" value="{{role}}" class="md-primary">{{role}}</md-radio-button>
+                        </md-radio-group>
+                    </div>
+                </md-dialog-content>
+
+                <div class="md-actions" layout="row">
+                    <md-button ng-click="cancel()" md-autofocus>
+                        Cancel
+                    </md-button>
+                    <span flex></span>
+                    <md-button ng-click="select(selected)" style="margin-right:20px;">
+                        Select
+                    </md-button>
+                </div>
+            </form>
+        </md-dialog>
+    </script>
+</div>
