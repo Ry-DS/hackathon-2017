@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Admin</title>
+
+
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+        <defs>
+            <g id="icon-search">
+                <path class="path1" d="M31.12 31.12c-1.174 1.174-3.077 1.174-4.25 0l-5.304-5.304c-2.18 1.399-4.758 2.232-7.541 2.232-7.745 0-14.024-6.278-14.024-14.024s6.279-14.024 14.024-14.024c7.746 0 14.024 6.278 14.024 14.024 0 2.782-0.834 5.361-2.232 7.542l5.304 5.304c1.174 1.174 1.174 3.076 0 4.249zM14.024 4.007c-5.532 0-10.017 4.484-10.017 10.017s4.485 10.017 10.017 10.017c5.533 0 10.017-4.484 10.017-10.017s-4.484-10.017-10.017-10.017z"></path>
+            </g>
+        </defs>
+    </svg>
+    <div class="wrapper">
+        <nav id="leftNav">
+            <ul>
+                <li class="icon-settings"><span class="active"></span><a href="#"></a></li>
+                <li class="icon-home selected"><a href="#"></a></li>
+                <li class="icon-calendar"><a href="#"></a></li>
+                <li class="icon-circles"><a href="#"></a></li>
+                <li class="icon-doneTask"><a href="#"></a></li>
+                <li class="icon-stats"><a href="#"></a></li>
+            </ul>
+        </nav>
+        <header>
+            <div id="searchBox">
+                <form autocomplete="off">
+                    <label for="search">
+                        <svg class="icon icon-search" viewBox="0 0 32 32"><use xlink:href="#icon-search"></use></svg>
+                    </label>
+                    <input type="text" id="search" class="searchInput" placeholder="Search for tasks, goals and reviews">
+                </form>
+            </div>
+            <nav id="topNav">
+                <ul>
+                    <li class="icon-addCalendar"><a href="#"></a></li>
+                    <li class="icon-addToCircles"><a href="#"></a></li>
+                    <li class="icon-notifications"><a href="#"><span class="counter">11</span></a></li>
+                    <li class="icon-user1"><a href="#"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="toDo">
+            <div class="reviews">
+                <div class="title">
+                    <h1>Reviews</h1>
+                    <a href="#"><span class="add addReview">+</span></a>
+                </div>
+                <form autocomplete="off">
+                    <ul>
+                        <li><input type="checkbox" id="review_3"><label for="review_3">360 Monthly Team Review</label><span class="alert"><input class='reviewDate' type="text" readonly value="Due in 2 days"></span></li>
+                        <li><input type="checkbox" id="review_2"><label for="review_2">Self Review</label><span><input class='reviewDate' type="text" readonly value="Due in 5 days"></span></li>
+                        <li><input type="checkbox" id="review_1"><label for="review_1">6-Month Performance Review</label><span><input class='reviewDate' type="text" readonly value="Due in 1 week"></span></li>
+                    </ul>
+                </form>
+            </div>
+            <div class="goals">
+                <div class="title">
+                    <h1>Goals</h1>
+                    <a href="#"><span class="add addGoal">+</span></a>
+                </div>
+                <form autocomplete="off">
+                    <ul>
+                        <li><input type="checkbox" id="goal_4"><label for="goal_4">5 Team Goals Completed</label><span class="warn-score"><input class='goalAchivements' type="text" readonly value="Awaiting Scoring"></span></li>
+                        <li><input type="checkbox" id="goal_3"><label for="goal_3">Team Goals Set</label><span class="warn-approval"><input class='goalAchivements' type="text" readonly value="Awaiting Approval"></span></li>
+                        <li><input type="checkbox" id="goal_2"><label for="goal_2">1 Team Goal Overdue</label></li>
+                        <li><input type="checkbox" id="goal_1"><label for="goal_1">Achieve Sales Quota</label></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="yourTeam">
+            <form action="">
+                <select name="" id="">
+                    <option value="yourTeam" data-icon="icon-team">Your Team</option>
+                </select>
+            </form>
+        </div>
+        <div class="details">
+            <ul>
+                <li>
+                    <div class="reviewFeedback">
+                        <div class="details-header">
+                            <h2>Review Feedback</h2>
+                            <a href="#" class="icon-setReview">
+                                <span class="tooltip">
+                                    <span>Set a Review</span>
+                                </span>
+                            </a>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="score">
+                                    <p>85</p>
+                                    <span class="circle purple"></span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">Monthly Check-in</p>
+                                    <p class="type">Self Review</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="score">
+                                    <p>82</p>
+                                    <span class="circle orange"></span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">Leadership Assessment</p>
+                                    <p class="type">Manager Review</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="score">
+                                    <p>76</p>
+                                    <span class="circle yellow"></span>
+                                </div>
+                                <div class="info">
+                                    <p class="title">Team Peer Assessment</p>
+                                    <p class="type">360 Review</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="chart-bar">
+                            <ul id="numbers">
+                                <li><span>100</span></li>
+                                <li><span>75</span></li>
+                                <li><span>50</span></li>
+                                <li><span>25</span></li>
+                            </ul>
+                            <ul id="bars">
+                                <li><div data-percentage="52" class="bar">67</div><span>Team</span></li>
+                                <li><div data-percentage="65" class="bar">83</div><span>Compagny</span></li>
+                            </ul>
+                        </div>
+                        <div class="action"><p><a href="#" class="icon-onDemandReview">OnDemand Review</a></p></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="goalProgress">
+                        <div class="details-header">
+                            <h2>Goal Progress</h2>
+                            <a href="#" class="icon-setGoal">
+                                <span class="tooltip">
+                                    <span>Set a Goal</span>
+                                </span>
+                            </a>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="icon-user1"></div>
+                                <div class="info">
+                                    <p class="name">Vienna Calico <span class="position">&bull; Project Lead</span></p>
+                                    <div class="progressBar">
+                                        <span class="progress" data-progressValue="90"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-user2"></div>
+                                <div class="info">
+                                    <p class="name">Vienna Calico <span class="position">&bull; Project Lead</span></p>
+                                    <div class="progressBar">
+                                        <span class="progress" data-progressValue="83"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-user3"></div>
+                                <div class="info">
+                                    <p class="name">Vienna Calico <span class="position">&bull; Project Lead</span></p>
+                                    <div class="progressBar">
+                                        <span class="progress" data-progressValue="75"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-user4"></div>
+                                <div class="info">
+                                    <p class="name">Vienna Calico <span class="position">&bull; Project Lead</span></p>
+                                    <div class="progressBar">
+                                        <span class="progress" data-progressValue="47"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-user5"></div>
+                                <div class="info">
+                                    <p class="name">Vienna Calico <span class="position">&bull; Project Lead</span></p>
+                                    <div class="progressBar">
+                                        <span class="progress" data-progressValue="20"></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="action"><p><a href="#" class="icon-manageGoals">Manage Goals</a></p></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="notes">
+                        <div class="details-header">
+                            <h2>Notes</h2>
+                            <a href="#" class="icon-setNote">
+                                <span class="tooltip">
+                                    <span>Set a Note</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="chart">
+                            <div class="doughnutChart"></div>
+                            <ul class="chart-legend">
+                                <li>
+                                    <span></span>
+                                    <em>Positive</em>
+                                </li>
+                                <li>
+                                    <span></span>
+                                    <em>Neutral</em>
+                                </li>
+                                <li>
+                                    <span></span>
+                                    <em>Negative</em>
+                                </li>
+                                <li>
+                                    <span></span>
+                                    <em>Self</em>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="chart-bar">
+                            <ul id="numbers">
+                                <li><span>60</span></li>
+                                <li><span>45</span></li>
+                                <li><span>30</span></li>
+                                <li><span>15</span></li>
+                            </ul>
+                            <ul id="bars">
+                                <li><div data-percentage="52" class="bar">+41</div><span>Team</span></li>
+                                <li><div data-percentage="65" class="bar">+47</div><span>Compagny</span></li>
+                            </ul>
+                        </div>
+                        <div class="action"><p><a href="#" class="icon-askFeedback">Ask for feedback</a></p></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <footer></footer>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.selectboxit/3.8.0/jquery.selectBoxIt.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
