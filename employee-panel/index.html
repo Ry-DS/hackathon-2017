@@ -25,8 +25,8 @@
         <nav id="leftNav">
             <ul>
                 <li class="icon-settings"><span class="active"></span><a href="#"></a></li>
-                <li class="icon-home selected"><a href="#"></a></li>
-                <li class="icon-calendar"><a href="#"></a></li>
+                <li class="icon-home selected"><a href="index.html"></a></li>
+                <li class="icon-calendar"><a href="assign.html"></a></li>
                 <li class="icon-circles"><a href="#"></a></li>
                 <li class="icon-doneTask"><a href="#"></a></li>
                 <li class="icon-stats"><a href="#"></a></li>
@@ -53,7 +53,7 @@
         <div class="toDo">
             <div class="reviews">
                 <div class="title">
-                    <h1>Reviews</h1>
+                    <h1>Upcoming Tasks</h1>
                     <a href="#"><span class="add addReview">+</span></a>
                 </div>
                 <form autocomplete="off">
@@ -66,19 +66,43 @@
             </div>
             <div class="goals">
                 <div class="title">
-                    <h1>Goals</h1>
+                    <h1>Polls</h1>
                     <a href="#"><span class="add addGoal">+</span></a>
+
+                    <form autocomplete="off">
+                        <h2>What do you think on our new AI?</h2>
+                        <ul>
+                            <li><input type="checkbox" id="poll1"><label for="poll1">I Love it</label></li>
+                            <li><input type="checkbox" id="poll2"><label for="poll2">It's Good</label></li>
+                            <li><input type="checkbox" id="poll3"><label for="poll3">I Don't Mind it</label></li>
+                            <li><input type="checkbox" id="poll4"><label for="poll4">I Hate it</label></li>
+                        </ul>
+                    </form>
                 </div>
-                <form autocomplete="off">
-                    <ul>
-                        <li><input type="checkbox" id="goal_4"><label for="goal_4">5 Team Goals Completed</label><span class="warn-score"><input class='goalAchivements' type="text" readonly value="Awaiting Scoring"></span></li>
-                        <li><input type="checkbox" id="goal_3"><label for="goal_3">Team Goals Set</label><span class="warn-approval"><input class='goalAchivements' type="text" readonly value="Awaiting Approval"></span></li>
-                        <li><input type="checkbox" id="goal_2"><label for="goal_2">1 Team Goal Overdue</label></li>
-                        <li><input type="checkbox" id="goal_1"><label for="goal_1">Achieve Sales Quota</label></li>
-                    </ul>
-                </form>
             </div>
         </div>
+
+        <div id="myDIV" class="toDo" style="width:800px; margin:17px auto;margin-left:500px">
+            <!-- <img src="https://i.pinimg.com/originals/f2/ef/c4/f2efc4755b197311e16a6567c2724414.png" alt="Mountain View" style="width: 125px;height: 125px;position: absolute;left: 502px;top: 425px;">
+         <img src="https://i.pinimg.com/originals/5f/b5/42/5fb54269f9c5d82415dd55fcd66a2a0d.png" alt="Mountain View" style="width: 140px;height: 140px;position: absolute;left: 623px;top: 419px;">
+         <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Sad_Face_Emoji_large.png?v=1480481055" alt="Mountain View" style="width: 132px;height: 132px;position: absolute;left: 755px;top: 422px;" /> -->
+            <p style="margin-left:75px;margin-bottom:21px;font-size:20px;">How are you feeling today?</p>
+            <a onclick="myFunction()" href="#" class="button button-circle button-action">Good</a>
+            <a onclick="myFunction()" href="#" class="button button-circle button-highlight">Alright</a>
+            <a  onclick="myFunction()" href="#" class="button button-circle button-caution">Bad</a>
+        </div>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById('myDIV');
+                if (x.style.display === 'none') {
+                    x.style.display = 'block';
+                } else {
+                    x.style.display = 'none';
+                }
+            }
+        </script>
+
         <div class="yourTeam">
             <form action="">
                 <select name="" id="">
@@ -139,7 +163,7 @@
                             </ul>
                             <ul id="bars">
                                 <li><div data-percentage="52" class="bar">67</div><span>Team</span></li>
-                                <li><div data-percentage="65" class="bar">83</div><span>Compagny</span></li>
+                                <li><div data-percentage="65" class="bar">83</div><span>Company</span></li>
                             </ul>
                         </div>
                         <div class="action"><p><a href="#" class="icon-onDemandReview">OnDemand Review</a></p></div>
@@ -245,7 +269,7 @@
                             </ul>
                             <ul id="bars">
                                 <li><div data-percentage="52" class="bar">+41</div><span>Team</span></li>
-                                <li><div data-percentage="65" class="bar">+47</div><span>Compagny</span></li>
+                                <li><div data-percentage="65" class="bar">+47</div><span>Company</span></li>
                             </ul>
                         </div>
                         <div class="action"><p><a href="#" class="icon-askFeedback">Ask for feedback</a></p></div>
