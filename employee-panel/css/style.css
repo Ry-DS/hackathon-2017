@@ -1914,3 +1914,45 @@ button.button:disabled {
   background: #764479;
   color: #3e1740;
 }
+
+
+/* STOP WATCH  */
+
+.wrapper {
+    position: relative;
+    width: 385px;
+    height: 200px;
+    margin: 50px auto;
+    font-family: sans-serif;
+    color: skyblue;
+    margin-top: 20vh;
+}
+
+.time {
+    font-size: 500%;
+    width: 100%;
+    margin: auto;
+    text-align: right;
+}
+
+.time span {
+    width: 80px;
+    display: inline-block;
+}
+
+.controls {
+    position: absolute;
+    right: 60px;
+    bottom: 25px;
+}
+
+button {
+    height: 60px;
+    width: 120px;
+    font-size: 30%;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
